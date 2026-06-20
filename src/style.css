@@ -1,0 +1,339 @@
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background: radial-gradient(
+    circle at center,
+    #0a2a43,
+    #020510,
+    #000000
+  );
+
+  font-family: Arial, sans-serif;
+}
+canvas {
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
+.overlay {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+}
+.register-btn {
+  margin-top: 25px;
+
+  padding: 14px 30px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: cyan;
+
+  color: black;
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 15px cyan,
+    0 0 30px cyan;
+}
+
+.register-btn:hover {
+  transform: scale(1.08);
+
+  box-shadow:
+    0 0 20px cyan,
+    0 0 40px cyan,
+    0 0 80px cyan;
+}
+.overlay h1 {
+  font-size: 5rem;
+  color: #00ffff;
+
+  text-shadow:
+    0 0 5px #00ffff,
+    0 0 10px #00ffff,
+    0 0 20px #00ffff;
+
+  opacity: 0.9;
+}
+
+.overlay p {
+  font-size: 1.4rem;
+  color: white;
+}
+
+.countdown {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  color: cyan;
+  font-size: 22px;
+
+  border: 1px solid cyan;
+  padding: 10px 20px;
+  border-radius: 10px;
+
+  backdrop-filter: blur(5px);
+
+  text-shadow:
+    0 0 10px cyan;
+}
+
+.event-container {
+  position: absolute;
+  bottom: 10px;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 25px;
+
+  z-index: 100;
+}
+
+.event-card {
+  width: 240px;
+
+  background: rgba(0,255,255,0.08);
+
+  border: 1px solid rgba(0,255,255,0.4);
+
+  border-radius: 18px;
+
+  padding: 20px;
+
+  color: white;
+
+  backdrop-filter: blur(10px);
+
+  transition: all 0.4s ease;
+}
+
+.event-card:hover {
+  transform:
+    translateY(-15px)
+    scale(1.05);
+
+  box-shadow:
+    0 0 20px cyan,
+    0 0 40px cyan,
+    0 0 80px cyan;
+}
+
+.event-card h2 {
+  color: cyan;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  margin-top: 25px;
+
+  color: cyan;
+  font-weight: bold;
+  font-size: 18px;
+
+  text-shadow: 0 0 10px cyan;
+
+  position: relative;
+  z-index: 100;
+}
+
+/* Navbar */
+
+.navbar {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 20px 50px;
+
+  box-sizing: border-box;
+
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: flex;
+
+  gap: 30px;
+
+  list-style: none;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.navbar li:hover {
+  color: cyan;
+}
+
+.logo {
+  color: cyan;
+
+  font-weight: bold;
+
+  font-size: 24px;
+
+  text-shadow: 0 0 15px cyan;
+}
+
+/* Logo */
+
+.tech-logo {
+  font-size: 60px;
+
+  margin-bottom: 10px;
+
+  text-shadow:
+    0 0 20px cyan,
+    0 0 40px cyan;
+}
+
+/* Event Buttons */
+
+.event-btn {
+  margin-top: 10px;
+
+  padding: 10px 20px;
+
+  border: none;
+
+  border-radius: 20px;
+
+  background: cyan;
+
+  color: black;
+
+  cursor: pointer;
+
+  font-weight: bold;
+}
+
+/* Footer */
+
+.footer {
+  margin-top: 80px;
+
+  padding: 20px;
+
+  text-align: center;
+
+  color: white;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  border-top: 1px solid cyan;
+}
+
+.navbar li {
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar li::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 0;
+  height: 2px;
+
+  background: cyan;
+
+  transition: 0.3s;
+}
+
+.navbar li:hover::after {
+  width: 100%;
+}
+.future-tag {
+  color: cyan;
+
+  letter-spacing: 8px;
+
+  font-size: 14px;
+
+  margin-bottom: 15px;
+
+  text-shadow: 0 0 10px cyan;
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,0.8);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.popup-box {
+  width: 500px;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  background: #071520;
+
+  border: 1px solid cyan;
+
+  color: white;
+
+  text-align: center;
+
+  box-shadow:
+    0 0 20px cyan,
+    0 0 50px cyan;
+}
+
+.popup-box h2 {
+  color: cyan;
+}
+
+.popup-box button {
+  margin-top: 20px;
+
+  padding: 10px 20px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: cyan;
+
+  cursor: pointer;
+}
